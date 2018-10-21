@@ -2,9 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/skyblueComplement"
     tools:context=".MainActivity">
 
 
@@ -14,7 +15,8 @@
         android:layout_height="200dp"
         android:gravity="center"
         android:text="Who is the 44th President of the United States?"
-
+        android:background="@drawable/card_background"
+        android:elevation="10dp"
         android:textColor="@android:color/black"
         android:textSize="30sp" />
 
@@ -22,12 +24,85 @@
         android:id="@+id/flashcard_answer"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:background="@drawable/card_background2"
+        android:elevation="10dp"
+        android:fontFamily="@font/belgrano"
         android:gravity="center"
         android:text="Barack Obama"
-
         android:textColor="@android:color/black"
         android:textSize="30sp"
         android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/choice1"
+        android:layout_width="292dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="245dp"
+        android:fontFamily="@font/belgrano"
+        android:background="@drawable/question_background"
+        android:elevation="10dp"
+        android:text="George Bush"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/choice2"
+        android:layout_width="292dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="165dp"
+        android:fontFamily="@font/belgrano"
+        android:background="@drawable/question_background"
+        android:elevation="10dp"
+        android:text="Barack Obama"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/choice3"
+        android:layout_width="292dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="85dp"
+        android:fontFamily="@font/belgrano"
+        android:background="@drawable/question_background"
+        android:elevation="10dp"
+        android:text="Bill Clinton"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/hide_choices"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        app:srcCompat="@drawable/ic_hide_eye" />
+    <ImageView
+        android:id="@+id/show_choices"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/ic_show_eye" />
+
+    <Button
+        android:id="@+id/Reset_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/hide_choices"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="21dp"
+        android:fontFamily="@font/belgrano"
+        android:text="Reset"
+        android:textSize="14sp" />
 
 
 </RelativeLayout>

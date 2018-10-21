@@ -3,4 +3,23 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="my_red_color">#ee0000</color>
+    <color name="my_red_colorMono">#d52b2b</color>
+    <color name="my_yellow_color">#FFFF00</color>
+
+    <color name="blue">#4ca7e0</color>
+    <color name="skyblue">#87CEFA</color>
+    <color name="skyblueComplement">#faaf87</color>
+
+    <color name="skyblueAngulous">#9c87fa</color>
+    <color name="skyblueAngulousMono">#674ce0</color>
+
+    <color name="green">#4ce085</color>
+    <color name="lightgreen">#87fab3</color>
+    <color name="lightgreenComplement">#fa9387</color>
+
+    <color name="lightgreenAngulous">#87cefa</color>
+    <color name="lightgreenAngulousMono">#4ca7e0</color>
+
 </resources>
