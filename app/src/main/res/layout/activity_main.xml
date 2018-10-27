@@ -37,12 +37,10 @@
         android:id="@+id/choice1"
         android:layout_width="292dp"
         android:layout_height="42dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="245dp"
-        android:fontFamily="@font/belgrano"
+        android:layout_centerInParent="true"
         android:background="@drawable/question_background"
         android:elevation="10dp"
+        android:fontFamily="@font/belgrano"
         android:text="George Bush"
         android:textAlignment="center"
         android:textSize="30sp" />
@@ -53,10 +51,10 @@
         android:layout_height="42dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="165dp"
-        android:fontFamily="@font/belgrano"
+        android:layout_marginBottom="172dp"
         android:background="@drawable/question_background"
         android:elevation="10dp"
+        android:fontFamily="@font/belgrano"
         android:text="Barack Obama"
         android:textAlignment="center"
         android:textSize="30sp" />
@@ -67,10 +65,10 @@
         android:layout_height="42dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="85dp"
-        android:fontFamily="@font/belgrano"
+        android:layout_marginBottom="105dp"
         android:background="@drawable/question_background"
         android:elevation="10dp"
+        android:fontFamily="@font/belgrano"
         android:text="Bill Clinton"
         android:textAlignment="center"
         android:textSize="30sp" />
@@ -103,6 +101,15 @@
         android:fontFamily="@font/belgrano"
         android:text="Reset"
         android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/add_card"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/hide_choices"
+        android:layout_marginEnd="46dp"
+        app:srcCompat="@drawable/ic_adding_sign" />
 
 
 </RelativeLayout>
