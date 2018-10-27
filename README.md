@@ -26,7 +26,7 @@ http://g.recordit.co/trUOfDa4kb.gif
 ## Lab 2
 ### App Description
 Continuation of previous version, but adding the feature to allow user to add their own question and answer.
-### App Walk-though
+### App Walk-through
 http://g.recordit.co/0KUsbG2aFu.gif
 <img src="http://g.recordit.co/0KUsbG2aFu.gif" width=200><br>
 
