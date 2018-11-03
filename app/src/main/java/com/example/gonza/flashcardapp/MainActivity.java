@@ -1,6 +1,7 @@
 package com.example.gonza.flashcardapp;
 
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
 
         findViewById(R.id.flashcard_question).setOnClickListener(new View.OnClickListener() { //when the flashcard question is clicked
@@ -80,8 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.Reset_Button).setOnClickListener(new View.OnClickListener() //resets to beginning state
         {
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 findViewById(R.id.flashcard_answer).setVisibility(View.INVISIBLE);
                 findViewById(R.id.flashcard_question).setVisibility(View.VISIBLE);
                 findViewById(R.id.app_background).setBackgroundColor(getResources().getColor(R.color.skyblueComplement, null));
@@ -102,29 +101,54 @@ public class MainActivity extends AppCompatActivity {
 
         //----------
 
-        findViewById(R.id.add_card).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.add_card).setOnClickListener(new View.OnClickListener() { //add button takes user to addCardActivity
             @Override
             public void onClick(View v) {
 
                 Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
-                intent.putExtra("stringKey1", "harry potter");
-                intent.putExtra("stringKey2", "voldemort");
                 MainActivity.this.startActivityForResult(intent, 100);
             }
         });
 
+        findViewById(R.id.edit_card).setOnClickListener(new View.OnClickListener() { //we want this to do the same as add_card but with the values from addCardActivity
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
+                intent.putExtra("edit_question", user_question);
+                intent.putExtra("edit_answer", user_answer);
+                intent.putExtra("edit_firstChoice", firstChoice);
+                intent.putExtra("edit_secondChoice", secondChoice);
+                intent.putExtra("edit_thirdChoice", thirdChoice);
+                MainActivity.this.startActivityForResult(intent, 100);
+
+            }
+        });
+
+
     }
+    String user_question, user_answer;
+    String firstChoice, secondChoice, thirdChoice;
 
-
-   protected void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
-        if(requestCode == 100 && resultCode == RESULT_OK) //meaning that the 100 has to match the other 100 we used we called startActivityForResult
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 100 && resultCode == RESULT_OK) //meaning that the 100 has to match the other 100 we used we called startActivityForResult
         {
-            String user_question = data.getExtras().getString("user's question");
-            String user_answer = data.getExtras().getString("user's answer");
+            user_question = data.getExtras().getString("user's question");
+            user_answer = data.getExtras().getString("user's answer");
 
-            ((TextView)findViewById(R.id.flashcard_question)).setText(user_question);
-            ((TextView)findViewById(R.id.flashcard_answer)).setText(user_answer);
+            firstChoice = data.getExtras().getString("user's answer choice1");
+            secondChoice = data.getExtras().getString("user's answer choice2");
+            thirdChoice = data.getExtras().getString("user's answer choice3");
+
+
+            ((TextView) findViewById(R.id.flashcard_question)).setText(user_question);
+            ((TextView) findViewById(R.id.flashcard_answer)).setText(user_answer);
+
+            ((TextView) findViewById(R.id.choice1)).setText(firstChoice);
+            ((TextView) findViewById(R.id.choice2)).setText(secondChoice);
+            ((TextView) findViewById(R.id.choice3)).setText(thirdChoice);
+
+            Snackbar.make(findViewById(R.id.flashcard_answer), "Card successfully created", Snackbar.LENGTH_SHORT).show();
+
         }
     }
 }
