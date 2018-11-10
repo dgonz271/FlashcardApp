@@ -25,10 +25,11 @@ http://g.recordit.co/trUOfDa4kb.gif
 
 ## Lab 2
 ### App Description
-Continuation of previous version, but adding the feature to allow user to add their own question and answer.
+Continuation of previous version, but adding the feature to allow user to add their own question, answer, and answer choices.
+Additional optional features added.
 ### App Walk-through
-http://g.recordit.co/0KUsbG2aFu.gif
-<img src="http://g.recordit.co/0KUsbG2aFu.gif" width=200><br>
+http://g.recordit.co/ThLqmhDyOx.gif
+<img src="http://g.recordit.co/ThLqmhDyOx.gif" width=200><br>
 
 
 ## Required
@@ -39,8 +40,29 @@ http://g.recordit.co/0KUsbG2aFu.gif
 - [x] Push your progress to GitHub!
 
 ## Optional
-- [ ] User can edit a card
-- [ ] An error message is shown if the user doesn't enter both a Question and an Answer
-- [ ] A notification is shown if the card was created successfully
-- [ ] User can also enter multiple choice answers when creating a card
-- [ ] App is further styled and customized!
+- [x] User can edit a card
+- [x] An error message is shown if the user doesn't enter both a Question and an Answer
+- [x] A notification is shown if the card was created successfully
+- [x] User can also enter multiple choice answers when creating a card
+- [x] App is further styled and customized!
+
+## Lab 3
+
+### App Description
+Implemented a database to save the user's new questions/answers
+
+### App Walk-though
+
+<img src="http://g.recordit.co/yKvhMkzM1d.gif" width=200><br>
+http://g.recordit.co/yKvhMkzM1d.gif
+
+
+## Required
+- [x] User can create a card and still see their created card when the app is relaunched.
+- [x] User can create muliple cards and browse through all created cards
+
+## Optional
+- [ ] User can delete a card and no longer see it in their deck anymore
+- [ ] Flashcards are shown in random order instead of the order they were created in
+- [ ] User can edit a card and see the edit saved when they browse through their deck of cards
+- [ ] User can create flashcards with multiple answers and be able to browse through cards with multiple choice answers shown
