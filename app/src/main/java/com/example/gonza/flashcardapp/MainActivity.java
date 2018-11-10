@@ -7,12 +7,29 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+
+    FlashcardDatabase flashcardDatabase;
+    List<Flashcard> allFlashcards;
+    int currentCardDisplayedIndex = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        flashcardDatabase = new FlashcardDatabase(getApplicationContext());
+        allFlashcards = flashcardDatabase.getAllCards();
+
+        if (allFlashcards != null && allFlashcards.size() > 0) {
+            ((TextView) findViewById(R.id.flashcard_question)).setText(allFlashcards.get(0).getQuestion());
+            ((TextView) findViewById(R.id.flashcard_answer)).setText(allFlashcards.get(0).getAnswer());
+
+        }
+
 
 
         findViewById(R.id.flashcard_question).setOnClickListener(new View.OnClickListener() { //when the flashcard question is clicked
@@ -124,8 +141,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.next_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //to show our next card
+                currentCardDisplayedIndex++;
+
+                //checking for outOfBoundsError
+                if (currentCardDisplayedIndex > allFlashcards.size() - 1) {
+                    currentCardDisplayedIndex = 0;
+                }
+
+                ((TextView) findViewById(R.id.flashcard_question)).setText(allFlashcards.get(currentCardDisplayedIndex).getQuestion());
+                ((TextView) findViewById(R.id.flashcard_answer)).setText(allFlashcards.get(currentCardDisplayedIndex).getAnswer());
+
+
+            }
+        });
 
     }
+
     String user_question, user_answer;
     String firstChoice, secondChoice, thirdChoice;
 
@@ -146,6 +182,9 @@ public class MainActivity extends AppCompatActivity {
             ((TextView) findViewById(R.id.choice1)).setText(firstChoice);
             ((TextView) findViewById(R.id.choice2)).setText(secondChoice);
             ((TextView) findViewById(R.id.choice3)).setText(thirdChoice);
+
+            flashcardDatabase.insertCard(new Flashcard(user_question, user_answer));
+
 
             Snackbar.make(findViewById(R.id.flashcard_answer), "Card successfully created", Snackbar.LENGTH_SHORT).show();
 

@@ -81,16 +81,15 @@
         android:id="@+id/hide_choices"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/show_choices"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="24dp"
         app:srcCompat="@drawable/ic_hide_eye" />
 
     <ImageView
         android:id="@+id/show_choices"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_alignTop="@+id/hide_choices"
+        android:layout_alignTop="@+id/add_card"
         android:layout_centerHorizontal="true"
         android:visibility="invisible"
         app:srcCompat="@drawable/ic_show_eye" />
@@ -109,9 +108,10 @@
         android:id="@+id/add_card"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/hide_choices"
-        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="45dp"
         app:srcCompat="@drawable/ic_adding_sign" />
 
     <ImageView
@@ -119,8 +119,16 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignStart="@+id/choice1"
-        android:layout_alignTop="@+id/hide_choices"
+        android:layout_alignTop="@+id/show_choices"
         app:srcCompat="@drawable/ic_edit_icon" />
+
+    <ImageView
+        android:id="@+id/next_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/add_card"
+        android:layout_alignTop="@+id/Reset_Button"
+        app:srcCompat="@drawable/ic_next_icon" />
 
 
 </RelativeLayout>
