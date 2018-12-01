@@ -76,8 +76,8 @@ Implementing Animations
 
 ### App Walk-though
 
-<img src="http://recordit.co/8WQyYGkw2T" width=200><br>
-http://recordit.co/8WQyYGkw2T
+<img src="http://g.recordit.co/8WQyYGkw2T.gif" width=200><br>
+http://g.recordit.co/8WQyYGkw2T.gif
 
 
 ## Required
