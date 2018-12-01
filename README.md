@@ -53,8 +53,8 @@ Implemented a database to save the user's new questions/answers
 
 ### App Walk-though
 
-<img src="http://g.recordit.co/yKvhMkzM1d.gif" width=200><br>
-http://g.recordit.co/yKvhMkzM1d.gif
+<img src="http://g.recordit.co/UdjloNUtbR.gif" width=200><br>
+http://g.recordit.co/UdjloNUtbR.gif
 
 
 ## Required
@@ -62,7 +62,31 @@ http://g.recordit.co/yKvhMkzM1d.gif
 - [x] User can create muliple cards and browse through all created cards
 
 ## Optional
-- [ ] User can delete a card and no longer see it in their deck anymore
-- [ ] Flashcards are shown in random order instead of the order they were created in
+- [x] User can delete a card and no longer see it in their deck anymore
+- [x] Flashcards are shown in random order instead of the order they were created in
 - [ ] User can edit a card and see the edit saved when they browse through their deck of cards
-- [ ] User can create flashcards with multiple answers and be able to browse through cards with multiple choice answers shown
+- [x] User can create flashcards with multiple answers and be able to browse through cards with multiple choice answers shown
+
+
+
+## Lab 4
+
+### App Description
+Implementing Animations
+
+### App Walk-though
+
+<img src="http://recordit.co/8WQyYGkw2T" width=200><br>
+http://recordit.co/8WQyYGkw2T
+
+
+## Required
+- [x] User sees a transition animation when going from the main screen to the add card screen.
+- [x] User sees a reveal animation when the flashcard is tapped and the answer is shown
+- [x] User sees flashcards animating in / out when the 'next' button is tapped
+
+## Optional
+- [x] Extra styling is added!
+- [ ] User sees a countdown timer for each question
+- [ ] User sees a 'card flip' animation when the card is tapped
+- [ ] User sees a celebration animation with confetti when they answer a question correctly
