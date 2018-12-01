@@ -227,7 +227,6 @@ public class MainActivity extends AppCompatActivity {
 
                         @Override
                         public void onAnimationRepeat(Animation animation) {
-
                         }
                     });
 
