@@ -51,7 +51,7 @@ http://g.recordit.co/ThLqmhDyOx.gif
 ### App Description
 Implemented a database to save the user's new questions/answers
 
-### App Walk-though
+### App Walk-through
 
 <img src="http://g.recordit.co/UdjloNUtbR.gif" width=200><br>
 http://g.recordit.co/UdjloNUtbR.gif
@@ -74,7 +74,7 @@ http://g.recordit.co/UdjloNUtbR.gif
 ### App Description
 Implementing Animations
 
-### App Walk-though
+### App Walk-through
 
 <img src="http://g.recordit.co/8WQyYGkw2T.gif" width=200><br>
 http://g.recordit.co/8WQyYGkw2T.gif
